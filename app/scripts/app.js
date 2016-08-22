@@ -15,11 +15,12 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'firebase'
   ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/main', {
+      .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
@@ -35,6 +36,6 @@ angular
         controllerAs: 'login'
       })
       .otherwise({
-        redirectTo: '/login'
+        redirectTo: '/'
       });
   });
