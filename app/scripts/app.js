@@ -16,7 +16,9 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'firebase'
+    'firebase',
+    'ui.calendar',
+    'ui.bootstrap'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -34,6 +36,16 @@ angular
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl',
         controllerAs: 'login'
+      })
+      .when('/schedules', {
+        templateUrl: 'views/schedules.html',
+        controller: 'SchedulesCtrl',
+        controllerAs: 'schedules'
+      })
+      .when('/book', {
+        templateUrl: 'views/book.html',
+        controller: 'BookCtrl',
+        controllerAs: 'book'
       })
       .otherwise({
         redirectTo: '/'
