@@ -23,10 +23,11 @@
  		minDate: new Date(),
  		showWeeks: true,
  		
+ 		
  	};
 
   // Disable weekend selection
-  $scope.disable = function disabled(data) {
+  $scope.disable = function (data) {
   	var date = data.date,
   	mode = data.mode;
   	return mode === 'day' && (date.getDay() === 0 || date.getDay() === 4 || date.getDay() === 2 );
